@@ -1,0 +1,146 @@
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: url('background.gif') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    font-size: 48px;
+    color: #00796b;
+}
+
+.game-container {
+    margin-top: 20px;
+}
+
+#letter {
+    font-size: 150px;
+    margin-bottom: 20px;
+    transition: transform 0.5s, opacity 0.5s;
+}
+
+#letter.animate {
+    transform: scale(1.2);
+    opacity: 0.5;
+}
+
+#input {
+    padding: 20px;
+    font-size: 28px;
+    margin-bottom: 10px;
+    border: 3px solid #00796b;
+    border-radius: 5px;
+}
+
+#feedback {
+    margin-top: 20px;
+    font-size: 32px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+#score-section {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+}
+
+#fruit-basket {
+    width: 500px;
+    height: auto;
+}
+
+#bananas {
+    display: flex;
+    flex-direction: column;
+}
+
+.banana {
+    width: 120px;
+    height: auto;
+    animation: drop 1s ease-in-out;
+}
+
+@keyframes drop {
+    0% {
+        transform: translateY(-100px);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+#statsButton {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #00796b;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+}
+
+#statsButton:hover {
+    background-color: #004d40;
+}
+
+#popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#popup.hidden {
+    display: none;
+}
+
+#popup-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#popup-content h2 {
+    margin-top: 0;
+}
+
+#popup-content button {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #00796b;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#popup-content button:hover {
+    background-color: #004d40;
+}

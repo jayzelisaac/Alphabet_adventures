@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alphabet Adventure</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Alphabet Adventure</h1>
+        <div class="game-container">
+            <p id="instruction">Find the letter:</p>
+            <div id="letter"></div>
+            <input type="text" id="input" placeholder="Type the letter here" maxlength="1" autocomplete="off">
+            <p id="feedback"></p>
+            <div id="score-section">
+                <div id="bananas"></div>
+            </div>
+            <button id="statsButton" onclick="showStats()">Show Stats</button>
+        </div>
+    </div>
+    <div id="popup" class="hidden">
+        <div id="popup-content">
+            <h2>Letters to Improve</h2>
+            <ul id="struggle-letters"></ul>
+            <button onclick="hidePopup()">Close</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
